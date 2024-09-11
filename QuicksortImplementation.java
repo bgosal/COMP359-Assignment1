@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class QuicksortImplementation{
 
@@ -21,7 +22,7 @@ public class QuicksortImplementation{
 
     public static int partition(int []array, int starting_index, int ending_index){
         
-        int pivot_Index = choosePivot(array, starting_index,ending_index);
+        int pivot_Index = choosePivot(array, starting_index, ending_index);
         int pivot_Value = array[pivot_Index];
 
         swap(array, pivot_Index, ending_index);
@@ -58,8 +59,17 @@ public class QuicksortImplementation{
     }
 
     public static int choosePivot(int [] array, int starting_index, int ending_index){ //only choose the middle pivot for now 
-        int middle_index = ((starting_index+ending_index )/2);
-        return middle_index;
+        int middle_pivot = ((starting_index+ending_index )/2);
+        return middle_pivot;
+        
+     // int first_pivot = starting_index;
+     // return first_pivot;
+        		
+     // int last_pivot = ending_index;
+     // return last_pivot;
+        
+     
+        
     }
 
     public static void swap(int []array, int index1, int index2){
