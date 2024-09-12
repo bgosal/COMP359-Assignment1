@@ -97,8 +97,7 @@ public class QuicksortImplementation{
         array[index2] = temp;
 
     }
-
-
+    	
 
 
     public static void main(String args[]){
@@ -106,20 +105,27 @@ public class QuicksortImplementation{
     
         // these are just some random test arrays 
         // to be updated with the correct ones later
-         int[] array1 = {8, 1, 6, 9, 6, 3, 5, 2, 7, 0};
-         System.out.println("Original Array 1: " + Arrays.toString(array1));
+        int[] array1 = {8, 1, 6, 9, 6, 3, 5, 2, 7, 0};
+        System.out.println("Original Array 1: " + Arrays.toString(array1));
 
         String[] positions ={"first", "last", "middle", "random"};
-
+        
         for (String pivots : positions){
             int[] arrayCopy = array1.clone();
             
+            long startTime = System.nanoTime();
             quicksort(arrayCopy, 0, arrayCopy.length - 1, pivots);
-            System.out.println("Sorted Array 1 with: " + pivots + " pivot" + Arrays.toString(arrayCopy));
+            long endTime = System.nanoTime();
+            long elapsedTime = endTime - startTime; // initialized the use of timer
+            
+            System.out.println("Array _ with: " + pivots + " pivot" + Arrays.toString(arrayCopy));
+            System.out.println("Elapsed Time: " + (elapsedTime/1_000_000.0) + "ms"); //converted into ms for readability
         }
-
+        
+        //planning on creating an identifier array called "order" with elements: sorted, unsorted, reverse-sorted so were able to state 
+        // the order and possibly size of the original array along with the array itself
+        
     
-
 		// int[] array1 = {8, 1, 6, 9, 6, 3, 5, 2, 7, 0};
         // System.out.println("Original Array 1: " + Arrays.toString(array1));
         // quicksort(array1, 0, array1.length - 1);
