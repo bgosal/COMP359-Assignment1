@@ -101,7 +101,7 @@ public class QuicksortImplementation{
 
 
 
-    public static void main(String[] args){
+    public static void main(String args[]){
 
     
         // these are just some random test arrays 
@@ -118,7 +118,7 @@ public class QuicksortImplementation{
             System.out.println("Sorted Array 1 with: " + pivots + " pivot" + Arrays.toString(arrayCopy));
         }
 
-
+    }
 
 		// int[] array1 = {8, 1, 6, 9, 6, 3, 5, 2, 7, 0};
         // System.out.println("Original Array 1: " + Arrays.toString(array1));
@@ -147,9 +147,5 @@ public class QuicksortImplementation{
         // quicksort(array3, 0, array3.length - 1);
         // System.out.println("Sorted Array 3: " + Arrays.toString(array3));
 
-	}
-
-
-
-
+	
 }
