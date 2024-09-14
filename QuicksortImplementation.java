@@ -97,15 +97,68 @@ public class QuicksortImplementation{
         array[index2] = temp;
 
     }
-    	
+
+
+    public static int[] generateRandomArray(int size, int min, int max){
+        int[] array = new int[size];
+        Random random = new Random();
+
+        for(int i =0; i<size; i++){
+            array[i] = random.nextInt(max -min +1) + min;
+        }
+        return array;
+
+    }
+
+    public static int[] generateSortedArray(int size, int min, int max) {
+        int[] array = new int[size];
+        Random random = new Random();
+    
+        int step = Math.max((max - min) / size, 1);
+    
+        array[0] = min + random.nextInt(step);
+    
+        for (int i = 1; i < size; i++) {
+            array[i] = array[i - 1] + random.nextInt(step + 1);
+            if (array[i] > max) {
+                array[i] = max;
+            }
+        }
+    
+        return array;
+    }
+    
+    public static int[] generateReverseSortedArray(int size, int min, int max){
+        int[] array = new int[size];
+        Random random = new Random();
+
+        int step = Math.max((max - min) / size, 1);
+
+        array[0] = max - random.nextInt(step);
+
+        for (int i = 1; i < size; i++) {
+            array[i] = array[i - 1] - random.nextInt(step + 1);
+            if (array[i] < min) {
+                array[i] = min;
+            }
+        }
+        return array;
+
+    }
+
 
 
     public static void main(String args[]){
 
     
-        // these are just some random test arrays 
-        // to be updated with the correct ones later
-        int[] array1 = {8, 1, 6, 9, 6, 3, 5, 2, 7, 0};
+        
+
+        //int[] array1= generateRandomArray(10, -100, 100);
+        //int[] array1 = {8, 1, 6, 9, 6, 3, 5, 2, 7, 0};
+        int[] array1= generateSortedArray(5, 0, 10);
+        
+        //int[] array1= generateReverseSortedArray(10, 0, 99);
+
         System.out.println("Original Array 1: " + Arrays.toString(array1));
 
         String[] positions ={"first", "last", "middle", "random"};
@@ -121,7 +174,15 @@ public class QuicksortImplementation{
             System.out.println("Array _ with: " + pivots + " pivot" + Arrays.toString(arrayCopy));
             System.out.println("Elapsed Time: " + (elapsedTime/1_000_000.0) + "ms"); //converted into ms for readability
         }
+
+
         
+
+        //Added new array creation functions (random, sorted, unsorted) to create even more arrays for testing purposes
+
+
+        //Random
+
         //planning on creating an identifier array called "order" with elements: sorted, unsorted, reverse-sorted so were able to state 
         // the order and possibly size of the original array along with the array itself
         
