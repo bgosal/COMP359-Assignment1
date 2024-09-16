@@ -104,7 +104,7 @@ public class QuicksortImplementation{
         Random random = new Random();
 
         for(int i =0; i<size; i++){
-            array[i] = random.nextInt(max -min +1) + min;
+            array[i] = random.nextInt(max -min+1) + min;
         }
         return array;
 
@@ -187,7 +187,7 @@ public class QuicksortImplementation{
     			}
             
     		averageTime = averageTime/5;	
-        	System.out.println("Array " + (i+1) + " with: " + pivots + " pivot: " + Arrays.toString(arrayCopy));
+        	System.out.println("Unsorted Array " + (i+1) + " with: " + pivots + " pivot: " + Arrays.toString(arrays[i]));
         	System.out.println("AVERAGE Elapsed Time: " + (averageTime/1_000_000.0) + "ms"); 
         	
             }
