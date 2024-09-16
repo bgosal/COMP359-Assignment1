@@ -5,7 +5,7 @@ public class QuicksortImplementation{
 
 
     public static void quicksort(int[] array, int starting_index, int ending_index, String pivot_position){
-        //System.out.println("Quicksort called on: " + Arrays.toString(array) + " from index " + starting_index + " to " + ending_index);
+       
         if(starting_index < ending_index){
             
             int pivot_index = partition(array, starting_index, ending_index, pivot_position);
@@ -33,7 +33,7 @@ public class QuicksortImplementation{
         int i = starting_index;
         int j = ending_index-1;
 
-        //System.out.println("Partitioning: " + Arrays.toString(array) + " with pivot value " + pivot_Value);
+        
 
         while (i<=j){
             while (i<=j && array[i]<=pivot_Value){
@@ -53,7 +53,7 @@ public class QuicksortImplementation{
         }
 
         swap(array,i, ending_index);
-       // System.out.println("Partitioned: " + Arrays.toString(array) + " with pivot index " + i);
+      
         return i;
         
     }
@@ -147,15 +147,22 @@ public class QuicksortImplementation{
     }
 
 
+    public static String formatArray(int[] array) {
+        int length = array.length;
+        
+        
+        if (length > 10) {
+            return Arrays.toString(Arrays.copyOfRange(array, 0, 5)) + " ... " + Arrays.toString(Arrays.copyOfRange(array, length - 5, length));
+        } else {
+            
+            return Arrays.toString(array);
+        }
+    }
+    
+
+
     public static void main(String args[]){
 
-
-        //int[] array1= generateRandomArray(10, -100, 100);
-        //int[] array1 = {8, 1, 6, 9, 6, 3, 5, 2, 7, 0};
-        //int[] array1= generateSortedArray(5, 0, 10);
-    	//int[] array1= generateReverseSortedArray(10, 0, 99);
-        //System.out.println("Original Array 1: " + Arrays.toString(a1));
-        
         int[] a1 = generateSortedArray(10, 0, 100);
         int[] a2 = generateRandomArray(10, 0, 100);
         int[] a3 = generateReverseSortedArray(10, 0, 100);    
@@ -169,16 +176,27 @@ public class QuicksortImplementation{
         int[] a9 = generateReverseSortedArray(1000, 0, 1500);
         
         int [][] arrays = {a1, a2, a3, a4, a5, a6, a7, a8, a9};
+        String[] arrayTypes = {"Sorted", "Randomized", "Reversed"};
         
-        String[] positions ={"First", "Last", "Middle", "Random"};
+        String[] positions ={"first", "last", "middle", "random"};
         
-        for (int i = 0; i<9; i++) {   	
-        	int[] arrayCopy = arrays[i].clone();
-        	
+        for (int i = 0; i< arrays.length; i++) {   	
+        	int[] originalArray = arrays[i];
+            String arrayType = arrayTypes[i % 3]; 
+            int arraySize = originalArray.length;
+            System.out.println("****************************************************************************");
+            System.out.println(arrayType + " Original Array " + (i + 1) + " with " +arraySize+ " numbers: " + formatArray(originalArray));
+        	System.out.println("****************************************************************************");
         	for (String pivots : positions){ 
+            
         		double averageTime = 0;
-        		
-    			for (int j = 0; j<6; j++) {     
+        		int[] arrayCopy = new int[0];
+                int pivotIndex = choosePivot(originalArray, 0, originalArray.length - 1, pivots); 
+                int pivotValue = originalArray[pivotIndex];
+
+                System.out.println("Initial Chosen Pivot Position: " + pivots + " | Pivot Value: " + pivotValue); 
+    			for (int j = 0; j<5; j++) {  
+                    arrayCopy = originalArray.clone();  
     				long startTime = System.nanoTime();
     				quicksort(arrayCopy, 0, arrayCopy.length - 1, pivots);        			        			
     				long endTime = System.nanoTime();
@@ -187,31 +205,15 @@ public class QuicksortImplementation{
     			}
             
     		averageTime = averageTime/5;	
-        	System.out.println("Unsorted Array " + (i+1) + " with: " + pivots + " pivot: " + Arrays.toString(arrays[i]));
-        	System.out.println("AVERAGE Elapsed Time: " + (averageTime/1_000_000.0) + "ms"); 
-        	
+        	System.out.println(arrayType + " Sorted Array with " + pivots + " pivot: " + formatArray(arrayCopy));
+            System.out.println("Average Elapsed Time: " + (averageTime / 1_000_000.0) + " ms");
+            System.out.println("----------------------------------------------");
+        }
+            System.out.println();
             }
 
         }
-        
-
-        //Added new array creation functions (random, sorted, unsorted) to create even more arrays for testing purposes
-        //Random
-
-		// int[] array1 = {8, 1, 6, 9, 6, 3, 5, 2, 7, 0};
-        // System.out.println("Original Array 1: " + Arrays.toString(array1));
-        // quicksort(array1, 0, array1.length - 1);
-        // System.out.println("Sorted Array 1: " + Arrays.toString(array1));
-
-        // int[] array2 = {9, 5, 9, 4, 2, 3, 1, 0};
-        // System.out.println("Original Array 2: " + Arrays.toString(array2));
-        // quicksort(array2, 0, array2.length - 1);
-        // System.out.println("Sorted Array 2: " + Arrays.toString(array2));
-
-        // int[] array3 = {12, 99, 50, 49, 36, 0, 5, 5, 5, 79, 101};
-        // System.out.println("Original Array 3: " + Arrays.toString(array3));
-        // quicksort(array3, 0, array3.length - 1);
-        // System.out.println("Sorted Array 3: " + Arrays.toString(array3));
+    
     }
 	
-}
+
