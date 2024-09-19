@@ -3,7 +3,6 @@ import java.util.Random;
 
 public class QuicksortImplementation{
 
-
     public static void quicksort(int[] array, int starting_index, int ending_index, String pivot_position){
        
         if(starting_index < ending_index){
@@ -15,10 +14,7 @@ public class QuicksortImplementation{
 
         }
 
-        
-        
     }  
-
 
     public static int partition(int []array, int starting_index, int ending_index, String pivot_position){
         
@@ -58,7 +54,7 @@ public class QuicksortImplementation{
         
     }
 
-    public static int choosePivot(int [] array, int starting_index, int ending_index, String pivot_position){ //only choose the middle pivot for now 
+    public static int choosePivot(int [] array, int starting_index, int ending_index, String pivot_position){ 
         
         Random random = new Random();
 
@@ -85,9 +81,7 @@ public class QuicksortImplementation{
             return random.nextInt(ending_index - starting_index + 1) + starting_index;
         }
 
-        
-     
-        
+       
     }
 
     public static void swap(int []array, int index1, int index2){
@@ -97,7 +91,6 @@ public class QuicksortImplementation{
         array[index2] = temp;
 
     }
-
 
     public static int[] generateRandomArray(int size, int min, int max){
         int[] array = new int[size];
@@ -124,7 +117,6 @@ public class QuicksortImplementation{
                 array[i] = max;
             }
         }
-    
         return array;
     }
     
@@ -132,7 +124,7 @@ public class QuicksortImplementation{
         int[] array = new int[size];
         Random random = new Random();
 
-        int step = Math.max((max-min)/size,3);  //adjusted the step slightly to better accommodate the range for the larger arrays
+        int step = Math.max((max-min)/size,3);  
         
         array[0] = max- random.nextInt(step);   
 
@@ -143,9 +135,7 @@ public class QuicksortImplementation{
             }
         }
         return array;
-
     }
-
 
     public static String formatArray(int[] array) {
         int length = array.length;
@@ -158,8 +148,6 @@ public class QuicksortImplementation{
             return Arrays.toString(array);
         }
     }
-    
-
 
     public static void main(String args[]){
 
@@ -193,7 +181,6 @@ public class QuicksortImplementation{
         		int[] arrayCopy = new int[0];
                 int pivotIndex = choosePivot(originalArray, 0, originalArray.length - 1, pivots); 
                 int pivotValue = originalArray[pivotIndex];
-
                 System.out.println("Initial Chosen Pivot Position: " + pivots + " | Pivot Value: " + pivotValue); 
     			for (int j = 0; j<5; j++) {  
                     arrayCopy = originalArray.clone();  
@@ -216,4 +203,3 @@ public class QuicksortImplementation{
     
     }
 	
-
