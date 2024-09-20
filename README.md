@@ -7,11 +7,11 @@ Our goal is to empirically measure the time efficiency of quicksort on a variety
 
 ## Work Log 
 
-Bhupinder: Pseudocode, Programming, Graphs/Spreadsheets
+**Bhupinder:** Pseudocode, Programming, Graphs/Spreadsheets
 
-Justina: Outline/Written Document, Graphs/Spreadsheets, References
+**Justina:** Outline/Written Document, Graphs/Spreadsheets, References
 
-Noor: Programming, Presentation Slides, Video Editing
+**Noor:** Programming, Presentation Slides, Video Editing
 
 
 
