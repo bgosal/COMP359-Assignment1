@@ -1,143 +1,28 @@
-commit 95a2a6600223584f6e11ef3ba1b270ab2b6def04
-Author: Noor <noor14598@live.ca>
-Date:   Wed Sep 18 20:36:02 2024 -0700
-
-    final polishing/testing/debugging. found no errors in logic or
-    structure. erased comments and unneeded spaces
-
-commit d867d4a2f7fc4c90c592d4c5174edfc4ba636523
-Author: Bhupinder Gosal (300140608) <bhupinder.gosal@student.ufv.ca>
-Date:   Mon Sep 16 15:55:04 2024 -0700
-
-    fixed time calculation logic + formatting
-
-commit 7bee58c9ddbbe2f60a186640c517209a5e1f01ad
-Author: Noor <noor14598@live.ca>
-Date:   Sun Sep 15 22:04:08 2024 -0700
-
-    fixed an output error, line 190
-
-commit 3be0b8579335938eff6bcbb7dd6be33a2936d118
-Author: Noor <noor14598@live.ca>
-Date:   Sun Sep 15 18:50:38 2024 -0700
-
-    completed main method
-
-commit 16ea7a717e796a18070ac21df2e080fb16599b62
-Merge: e3d363b bdce7b1
-Author: bgosal <110218591+bgosal@users.noreply.github.com>
-Date:   Sat Sep 14 14:18:07 2024 -0700
-
-    Merge pull request #3 from bgosal/array_creation_functions
-    
-    new array creation functions
-
-commit bdce7b1f4d04ba956502024064ba713a47bd9dfe
-Author: Bhupinder Gosal (300140608) <bhupinder.gosal@student.ufv.ca>
-Date:   Sat Sep 14 14:15:31 2024 -0700
-
-    new array creation functions
-
-commit e3d363ba7624dcd3f5288fa7664d0377eaf435e5
-Author: Noor <noor14598@live.ca>
-Date:   Thu Sep 12 10:57:57 2024 -0700
-
-    initialized the use of timer in main. commented future plans, x2
-
-commit 0a5a76c2a19a725fd0198687ab8fbae518747ae2
-Author: Noor <noor14598@live.ca>
-Date:   Thu Sep 12 10:57:01 2024 -0700
-
-    initialized the use of timer in main. commented future plans
-
-commit e452c967d30def8c6f7eb3f89618febf4a226228
-Author: Noor <noor14598@live.ca>
-Date:   Thu Sep 12 00:35:01 2024 -0700
-
-    created all arrays
-
-commit a259f463eddcba00a28bb2b19658ae7188c43e16
-Author: Noor <noor14598@live.ca>
-Date:   Thu Sep 12 00:34:24 2024 -0700
-
-    created all arrays
-
-commit 88c513edb85a280052ce57d4d0cff3af4b93ecc4
-Author: Bhupinder Gosal (300140608) <bhupinder.gosal@student.ufv.ca>
-Date:   Wed Sep 11 21:51:04 2024 -0700
-
-    choosepivot function working now
-
-commit 1e288e48215596ea9ff39cd7cc022643e9a0ba08
-Author: Noor <noor14598@live.ca>
-Date:   Wed Sep 11 10:54:38 2024 -0700
-
-    commented more of ChoosePivot function.changed int "middle_index" to
-    "middle_pivot"
-
-commit 7835ef0bfb25e31722289723daa1da9fd1f3767d
-Merge: 81e8989 26c7010
-Author: bgosal <110218591+bgosal@users.noreply.github.com>
-Date:   Tue Sep 10 19:12:09 2024 -0700
-
-    Merge pull request #2 from bgosal/rough
-    
-    implementation of quicksort
-
-commit 26c70104be6b52a485a867ee435af42a78e18f5a
-Author: Bhupinder Gosal (300140608) <bhupinder.gosal@student.ufv.ca>
-Date:   Tue Sep 10 19:10:33 2024 -0700
-
-    implemented quicksort algorithm with 3 diff arrays but only the middle as pivot point
-
-commit 81e89890bfe473bb95f6f8c4a5d014abda42e770
-Merge: c1ef277 e2203ed
-Author: bgosal <110218591+bgosal@users.noreply.github.com>
-Date:   Tue Sep 10 15:44:33 2024 -0700
-
-    Merge pull request #1 from bgosal/functions
-    
-    setup of the main functions
-
-commit e2203edf6004e6b58658fd5dbe7f505b27ec73b5
-Merge: e8faa8c c1ef277
-Author: bgosal <110218591+bgosal@users.noreply.github.com>
-Date:   Tue Sep 10 15:44:14 2024 -0700
-
-    Merge branch 'main' into functions
-
-commit e8faa8c22a0accbf9a4f6fcf33d2b520f615cf00
-Author: Bhupinder Gosal (300140608) <bhupinder.gosal@student.ufv.ca>
-Date:   Tue Sep 10 15:41:14 2024 -0700
-
-    setup of the main functions
-
-commit c1ef2775a4625f7f93604b4bf032dcd6810ea96d
-Author: supranoor <noor14598@live.ca>
-Date:   Mon Sep 9 22:59:04 2024 -0700
-
-    Delete .project
-
-commit e13d5e7f2ab89d2b9ea8cc89c3af60bb0ed7f357
-Author: Noor <noor14598@live.ca>
-Date:   Mon Sep 9 22:58:39 2024 -0700
-
-    test
-
-commit 7d46837c8c33786b96eb74dbf8ee82029cfbecc7
-Author: Noor <noor14598@live.ca>
-Date:   Mon Sep 9 22:57:50 2024 -0700
-
-    test
-
-commit 2cc0ac83679165bf1a82559c2225255601f0a337
-Author: Bhupinder Gosal (300140608) <bhupinder.gosal@student.ufv.ca>
-Date:   Mon Sep 9 18:16:29 2024 -0700
-
-    main file for coding
-
-commit be474f154783e270f607d69209e0a62504ef92f0
-Author: bgosal <110218591+bgosal@users.noreply.github.com>
-Date:   Mon Sep 9 17:50:00 2024 -0700
-
-    Initial commit
+98d869e - Noor, 3 minutes ago : sending updated git log
+044fd4a - Noor, 15 hours ago : attempting to send python files (test)
+2252e7f - bgosal, 19 hours ago : Update README.md
+2000cd3 - bgosal, 22 hours ago : Update README.md
+5476075 - supranoor, 2 days ago : Update README.md
+7474911 - Noor, 2 days ago : sending git-log.txt file
+95a2a66 - Noor, 2 days ago : final polishing/testing/debugging. found no errors in logic or structure. erased comments and unneeded spaces
+d867d4a - Bhupinder Gosal (300140608), 4 days ago : fixed time calculation logic + formatting
+7bee58c - Noor, 5 days ago : fixed an output error, line 190
+3be0b85 - Noor, 5 days ago : completed main method
+16ea7a7 - bgosal, 6 days ago : Merge pull request #3 from bgosal/array_creation_functions
+bdce7b1 - Bhupinder Gosal (300140608), 6 days ago : new array creation functions
+e3d363b - Noor, 8 days ago : initialized the use of timer in main. commented future plans, x2
+0a5a76c - Noor, 8 days ago : initialized the use of timer in main. commented future plans
+e452c96 - Noor, 9 days ago : created all arrays
+a259f46 - Noor, 9 days ago : created all arrays
+88c513e - Bhupinder Gosal (300140608), 9 days ago : choosepivot function working now
+1e288e4 - Noor, 9 days ago : commented more of ChoosePivot function.changed int "middle_index" to "middle_pivot"
+7835ef0 - bgosal, 10 days ago : Merge pull request #2 from bgosal/rough
+26c7010 - Bhupinder Gosal (300140608), 10 days ago : implemented quicksort algorithm with 3 diff arrays but only the middle as pivot point
+81e8989 - bgosal, 10 days ago : Merge pull request #1 from bgosal/functions
+e2203ed - bgosal, 10 days ago : Merge branch 'main' into functions
+e8faa8c - Bhupinder Gosal (300140608), 10 days ago : setup of the main functions
+c1ef277 - supranoor, 11 days ago : Delete .project
+e13d5e7 - Noor, 11 days ago : test
+7d46837 - Noor, 11 days ago : test
+2cc0ac8 - Bhupinder Gosal (300140608), 11 days ago : main file for coding
+be474f1 - bgosal, 11 days ago : Initial commit
