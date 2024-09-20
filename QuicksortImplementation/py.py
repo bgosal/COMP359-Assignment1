@@ -50,7 +50,7 @@ def choosePivot(arr, starting_index, ending_index, pivot_position):
     elif (pivot_position == 'random'):
         return random.randint(starting_index, ending_index)
     else:
-        raise ValueError("Invalid pivot position specified.")
+        return random.randint(starting_index, ending_index)
     
 
 def swap(arr, index1, index2):
