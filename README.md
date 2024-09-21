@@ -13,8 +13,13 @@ Our goal is to empirically measure the time efficiency of quicksort on a variety
 
 **Noor:** Programming, Presentation Slides, Video Editing
 
+## Excel Spreadsheet Link
 
+https://1drv.ms/x/c/7e8a826b8333612a/EchAmB9cDDxBohuf20DkphQBCOh2Z8tJ95Q7LjIPigMkEw?e=HWiCO9
 
+## Report Link
+
+https://1drv.ms/w/c/7e8a826b8333612a/ET6B7Mz53bxFnvQmqYgMdX4BcFEFDpkRxYq3ZjNYme-swQ?e=1UThrx
 
 ## Pseudocode
 
